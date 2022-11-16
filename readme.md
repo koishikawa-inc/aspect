@@ -1,5 +1,7 @@
 # Aspect
 
+![Screenshot](./screenshot.png)
+
 [GitHub Pages](https://koishikawa-inc.github.io/aspect/)
 
 ## できること
@@ -46,6 +48,10 @@
 - [react-uuid](https://github.com/RickBr0wn/react-uuid)
 
   id 生成
+
+### フォント
+
+- [Jost](https://fonts.google.com/specimen/Jost)
 
 ## 今後
 
