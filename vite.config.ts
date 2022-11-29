@@ -11,7 +11,7 @@ export default defineConfig({
   //     "@/": path.join(__dirname, "./src/"),
   //   },
   // },
-  base: "aspect",
+  base: "/aspect/",
   build: {
     outDir: "docs",
   },
