@@ -57,35 +57,6 @@ function App() {
         </div>
       </header>
       <main>
-        <div className="section">
-          <div className="content">
-            <Dropzone
-              onDrop={handleOnDropFiles}
-              onDropRejected={handleOnDropFilesRejected}
-              accept={{ 'image/*': [] }}
-            >
-              {({ getRootProps, getInputProps, isDragAccept, isDragReject, isDragActive, ...prop }) => {
-                return (
-                  <div
-                    {...getRootProps()}
-                    className={`dropzone ${isDragActive && 'isDragActive'} ${isDragAccept && 'isDragAccept'} ${isDragReject && 'isDragReject'}`}
-                  >
-                    <input {...getInputProps()} />
-                    <div>
-                      Add Images
-                      <p style={{ fontSize: '2em' }}>
-                        <HiDocumentDownload />
-                      </p>
-                      <p>Drag &amp; drop some files here, or click to select files</p>
-                      {isDragReject && <p>画像以外のファイルが含まれています</p>}
-                    </div>
-                  </div>
-                );
-              }}
-            </Dropzone>
-          </div>
-        </div>
-
         <div>
           <AnimatePresence initial={true}>
             {data.map((item, i) => {
@@ -132,6 +103,35 @@ function App() {
               );
             })}
           </AnimatePresence>
+        </div>
+
+        <div className="section">
+          <div className="content">
+            <Dropzone
+              onDrop={handleOnDropFiles}
+              onDropRejected={handleOnDropFilesRejected}
+              accept={{ 'image/*': [] }}
+            >
+              {({ getRootProps, getInputProps, isDragAccept, isDragReject, isDragActive, ...prop }) => {
+                return (
+                  <div
+                    {...getRootProps()}
+                    className={`dropzone ${isDragActive && 'isDragActive'} ${isDragAccept && 'isDragAccept'} ${isDragReject && 'isDragReject'}`}
+                  >
+                    <input {...getInputProps()} />
+                    <div>
+                      Add Images
+                      <p style={{ fontSize: '2em' }}>
+                        <HiDocumentDownload />
+                      </p>
+                      <p>Drag &amp; drop some files here, or click to select files</p>
+                      {isDragReject && <p>画像以外のファイルが含まれています</p>}
+                    </div>
+                  </div>
+                );
+              }}
+            </Dropzone>
+          </div>
         </div>
       </main>
 

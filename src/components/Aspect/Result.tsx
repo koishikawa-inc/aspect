@@ -25,7 +25,7 @@ export const Result: React.FC<Props> = React.memo(({ filename, size, ...props })
         const attr = ` width="${w.toFixed()}" height="${h.toFixed()}"`;
         const tag = `<img src="${filename}" ${attr} alt="" />`;
         const css = `width: ${w.toFixed()}px;\nheight: ${h.toFixed()}px;`;
-        const css_ar = `aspect-raio:  ${ratio.w.toFixed()} / ${ratio.h.toFixed()};`;
+        const css_ar = `aspect-ratio: ${ratio.w.toFixed()} / ${ratio.h.toFixed()};`;
 
         return (
           <div
